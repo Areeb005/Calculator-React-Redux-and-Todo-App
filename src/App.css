@@ -1,38 +1,118 @@
-.App {
+.main-div {
+  background: linear-gradient(to right, #00AAFF, #00FF6C);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.output-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  outline: none;
+  padding: 0px 20px;
+  width: 400px;
+  height: 70px;
+  text-align: end;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+
+.result-field {
+  color: white;
+  outline: none;
+  font-size: 30px;
+  text-align: end;
+  border: none;
+  word-wrap: break-word;
+  word-break: break-all;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.buttons-div {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.last-button {
+  margin-right: 0px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.equal-btn{
+  width: 47.5% !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.num-buttons {
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 18px;
   color: white;
+  padding: 15px 0px;
+  margin: 0px 10px 10px 0px;
+  width: 100px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: .3s;
 }
 
-.App-link {
-  color: #61dafb;
+.num-buttons:hover {
+  transition: .3s;
+  color: black;
+  background-color: rgba(250, 250, 250, 0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.history{
+  height: 100px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+
+.historyVal{
+  font-size: 30px;
+  margin: 0px 0px 10px -40px;
+  width: max-content;
+  color: white;
+  cursor: pointer;
+  list-style: none;
+}
+
+.history::-webkit-scrollbar {
+  width: 2px;
+}
+
+.history::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius: 10px;
+}
+
+.history::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.9); 
+}
+
+
+
+@media (max-width: 465px) {
+  .result-field {
+    width: 250px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .output-div {
+    width: 250px;
+  }
+  .equal-btn{
+    width: 45% !important;
+  }
+  .num-buttons {
+    width: 60px;
+    padding: 10px 0px;
   }
 }
