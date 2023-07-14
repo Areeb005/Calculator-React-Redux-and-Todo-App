@@ -73,11 +73,13 @@
   height: 100px;
   overflow-y: scroll;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .historyVal{
   font-size: 30px;
-  margin: 0px 0px 10px -40px;
+  margin: 10px 0px 0px -40px;
   width: max-content;
   color: white;
   cursor: pointer;
