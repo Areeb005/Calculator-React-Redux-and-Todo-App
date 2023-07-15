@@ -131,8 +131,7 @@
   }
   
   .history-div h1{
-    display: none;
-    
+    margin: 0px;
   }
 
   .calculator-div{
@@ -160,6 +159,10 @@
   .num-buttons {
     width: 60px;
     padding: 10px 0px;
+  }
+
+  .history-div h1{
+    font-size: 30px;
   }
 
   .history {
