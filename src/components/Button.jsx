@@ -42,9 +42,9 @@ const Button = (props) => {
 
 
 
-      if ((lastStateValue === '+' || lastStateValue === '-' || lastStateValue === '*' || lastStateValue === '÷' || lastStateValue === '.' || lastStateValue === '%') && (clickedValue === '+' || clickedValue === '-' || clickedValue === '*' || clickedValue === '÷' || clickedValue === '.' || clickedValue === '%')) return props.state
-      else if (allValues === '' && (clickedValue === '+' || clickedValue === '*' || clickedValue === '÷' || clickedValue === '.' || clickedValue === '%')) return props.state;
-      else if (props.state.includes('.') && clickedValue === '.') return props.state
+      if ((lastStateValue === '+' || lastStateValue === '-' || lastStateValue === '*' || lastStateValue === '÷' || lastStateValue === '.' || lastStateValue === '%') && (clickedValue === '+' || clickedValue === '-' || clickedValue === '*' || clickedValue === '÷' || clickedValue === '.' || clickedValue === '%')) return
+      else if (allValues === '' && (clickedValue === '+' || clickedValue === '*' || clickedValue === '÷' || clickedValue === '.' || clickedValue === '%')) return
+      else if (props.state.includes('.') && clickedValue === '.') return
       else {
         if (props.isCalculated) {
           if (clickedValue === '+' || clickedValue === '-' || clickedValue === '*' || clickedValue === '÷') {
@@ -68,34 +68,29 @@ const Button = (props) => {
 
       }
       else if (!operators.includes(clickedValue) && lastStateValue >= 0 || lastStateValue == '.') {
-        if ((lastStateValue === '+' || lastStateValue === '-' || lastStateValue === '*' || lastStateValue === '÷' || lastStateValue === '.' || lastStateValue === '%') && (clickedValue === '+' || clickedValue === '-' || clickedValue === '*' || clickedValue === '÷' || clickedValue === '.' || clickedValue === '%')) return props.state
-        else if (props.state[0] === '' && (clickedValue === '+' || clickedValue === '*' || clickedValue === '÷' || clickedValue === '.' || clickedValue === '%')) return props.state;
-        else {
-          if (props.isCalculated) {
-            if (clickedValue === '+' || clickedValue === '-' || clickedValue === '*' || clickedValue === '÷') {
-              props.setState(props.state.concat(clickedValue));
-              prev[prev.length - 1] = props.state.concat(clickedValue);
-              props.setforCalculation(prev);
-              props.setisCalculated(false);
-            } else {
-              props.setState(clickedValue.toString());
-              props.setforCalculation([clickedValue.toString()])
-              props.setisCalculated(false);
-            }
-          } else {
+
+        if (props.isCalculated) {
+          if (clickedValue === '+' || clickedValue === '-' || clickedValue === '*' || clickedValue === '÷') {
             props.setState(props.state.concat(clickedValue));
             prev[prev.length - 1] = props.state.concat(clickedValue);
             props.setforCalculation(prev);
+            props.setisCalculated(false);
+          } else {
+            props.setState(clickedValue.toString());
+            props.setforCalculation([clickedValue.toString()])
+            props.setisCalculated(false);
           }
+        } else {
+          props.setState(props.state.concat(clickedValue));
+          prev[prev.length - 1] = props.state.concat(clickedValue);
+          props.setforCalculation(prev);
         }
 
       } else if (operators.includes(clickedValue) || lastStateValue == '+' || lastStateValue == '-' || lastStateValue == '*' || lastStateValue == '÷' || lastStateValue == '%') {
-        if ((lastStateValue === '+' || lastStateValue === '-' || lastStateValue === '*' || lastStateValue === '÷' || lastStateValue === '.' || lastStateValue === '%') && (clickedValue === '+' || clickedValue === '-' || clickedValue === '*' || clickedValue === '÷' || clickedValue === '.' || clickedValue === '%')) return props.state
-        else {
-          props.setState(clickedValue.toString())
-          prev.push(clickedValue.toString());
-          props.setforCalculation(prev)
-        }
+
+        props.setState(clickedValue.toString())
+        prev.push(clickedValue.toString());
+        props.setforCalculation(prev)
 
       }
     };
@@ -108,15 +103,14 @@ const Button = (props) => {
     let forCalculation = array.join('');
 
     const lastStateValue = props.state[props.state.length - 1];
-    const operators = ['+', '-', '*', '÷', '%'];
-    
-    if ((!forCalculation.includes('+'))  && (!forCalculation.includes('-'))  && !forCalculation.includes('*') && !forCalculation.includes('÷') && !forCalculation.includes('%') ) return
+
+    if ((!forCalculation.includes('+')) && (!forCalculation.includes('-')) && !forCalculation.includes('*') && !forCalculation.includes('÷') && !forCalculation.includes('%')) return
     else {
       if ((lastStateValue === '+' || lastStateValue === '-' || lastStateValue === '*' || lastStateValue === '÷' || lastStateValue === '.' || lastStateValue === '%')) {
-        return props.state
+        return
       }
       else if (props.state === '') {
-        return props.state
+        return
       }
       else {
         props.setisCalculated(true);

@@ -19,8 +19,6 @@
   height: 70px;
   text-align: end;
   margin-bottom: 20px;
-  word-wrap: break-word;
-  word-break: break-all;
 }
 
 
@@ -30,8 +28,6 @@
   font-size: 30px;
   text-align: end;
   border: none;
-  word-wrap: break-word;
-  word-break: break-all;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -43,7 +39,7 @@
   margin-right: 0px !important;
 }
 
-.equal-btn{
+.equal-btn {
   width: 47.5% !important;
 }
 
@@ -69,35 +65,49 @@
 }
 
 
-.history{
+.history {
   height: 100px;
-  overflow-y: scroll;
+  width: 440px;
+  overflow-y: auto;
+  overflow-x: auto;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column-reverse;
 }
 
-.historyVal{
+.history ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.historyVal {
   font-size: 30px;
-  margin: 10px 0px 0px -40px;
-  width: max-content;
+  margin: 10px 0px 0px 0px;
+  padding: 0px 5px;
   color: white;
   cursor: pointer;
   list-style: none;
+  transition: .3s;
+}
+
+.historyVal:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: .3s;
 }
 
 .history::-webkit-scrollbar {
   width: 2px;
+  height: 2px;
 }
 
 .history::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
 .history::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.9); 
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.9);
 }
 
 
@@ -110,9 +120,11 @@
   .output-div {
     width: 250px;
   }
-  .equal-btn{
+
+  .equal-btn {
     width: 45% !important;
   }
+
   .num-buttons {
     width: 60px;
     padding: 10px 0px;
