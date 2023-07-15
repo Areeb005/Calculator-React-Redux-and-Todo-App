@@ -2,10 +2,12 @@
   background: linear-gradient(to right, #00AAFF, #00FF6C);
   height: 100vh;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  padding: 0px 10px;
+  padding: 0px 40px;
 }
+
 
 .output-div {
   display: flex;
@@ -64,15 +66,16 @@
   background-color: rgba(250, 250, 250, 0.5);
 }
 
+.history-div {
+  margin: 0px 0px 20px 40px;
+
+}
 
 .history {
-  height: 100px;
+  height: 300px;
   width: 440px;
   overflow-y: auto;
   overflow-x: auto;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column-reverse;
 }
 
 .history ul {
@@ -111,6 +114,32 @@
 }
 
 
+@media (max-width: 920px) {
+  .main-div {
+    flex-direction: column;
+  }
+
+  .history {
+    height: 100px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .history-div {
+    margin: 0px 0px 20px 0px;
+  
+  }
+  
+  .history-div h1{
+    display: none;
+    
+  }
+
+  .calculator-div{
+    width: 440px;
+
+  }
+}
 
 @media (max-width: 465px) {
   .result-field {
@@ -121,6 +150,9 @@
     width: 250px;
   }
 
+  .calculator-div{
+    width: 285px;
+  }
   .equal-btn {
     width: 45% !important;
   }
@@ -130,7 +162,7 @@
     padding: 10px 0px;
   }
 
-  .history{
+  .history {
     width: 290px;
   }
 }

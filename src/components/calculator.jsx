@@ -23,7 +23,8 @@ const Calculator = () => {
 
     return <>
         <div className='main-div'>
-            <div>
+            <div className='history-div'>
+                <h1>Recent Calculations</h1>
                 <div className='history'>
                     <ul>
                         {selector.map((elements, index) => {
@@ -31,6 +32,10 @@ const Calculator = () => {
                         })}
                     </ul>
                 </div>
+            </div>
+
+            <div className='calculator-div'>
+
 
                 <div className='output-div'>
                     <input type="text" className='result-field' value={Output} disabled />
