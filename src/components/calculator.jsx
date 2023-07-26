@@ -22,9 +22,9 @@ const Calculator = () => {
 
 
     return <>
-        <div className='main-div'>
+        <div className='main-div max-lg:mt-16'>
             <div className='history-div'>
-                <h1>Recent Calculations</h1>
+                <h1 className='text-4xl font-semibold'>Recent Calculations</h1>
                 <div className='history'>
                     <ul>
                         {selector.map((elements, index) => {
@@ -45,39 +45,43 @@ const Calculator = () => {
                     <Button value={'AC'} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} />
                     <Button value={'Del'} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} />
                     <Button value={'%'} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} />
-                    <Button value={'÷'} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} class={'last-button'} />
+                    <Button value={'÷'} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} className={'last-button'} />
                 </div>
 
                 <div className='buttons-div'>
                     <Button value={7} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} />
                     <Button value={8} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} />
                     <Button value={9} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} />
-                    <Button value={'*'} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} class={'last-button'} />
+                    <Button value={'*'} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} className={'last-button'} />
                 </div>
 
                 <div className='buttons-div'>
                     <Button value={4} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} />
                     <Button value={5} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} />
                     <Button value={6} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} />
-                    <Button value={'-'} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} class={'last-button'} />
+                    <Button value={'-'} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} className={'last-button'} />
                 </div>
 
                 <div className='buttons-div'>
                     <Button value={1} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} />
                     <Button value={2} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} />
                     <Button value={3} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} />
-                    <Button value={'+'} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} class={'last-button'} />
+                    <Button value={'+'} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} className={'last-button'} />
                 </div>
 
 
                 <div className='buttons-div'>
                     <Button value={0} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} />
                     <Button value={'.'} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} />
-                    <Button value={'='} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} class={'last-button equal-btn'} />
+                    <Button value={'='} state={Values} setState={setValues} isCalculated={isCalculated} setisCalculated={setisCalculated} forCalculation={forCalculation} setforCalculation={setforCalculation} setOutput={setOutput} Output={Output} className={'last-button equal-btn'} />
                 </div>
 
             </div>
         </div>
+
+
+
+
     </>
 }
 

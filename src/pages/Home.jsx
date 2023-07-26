@@ -1,5 +1,6 @@
 import Calculator from "../components/calculator"
 
+
 const home = () => {
 
 

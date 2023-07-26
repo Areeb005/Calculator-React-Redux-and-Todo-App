@@ -138,7 +138,7 @@ const Button = (props) => {
   // }
 
   return <>
-    <button className={`num-buttons ${props.class}`} onClick={props.value === '=' ? () => cal() : () => setVal()}> {props.value} </button>
+    <button className={`num-buttons ${props.className}`} onClick={props.value === '=' ? () => cal() : () => setVal()}> {props.value} </button>
     {/* <button className={`num-buttons ${props.class}`} onClick={clickedValue === '*' ? () => setOperator() : () => setVal()} >{clickedValue}</button> */}
   </>
 }
