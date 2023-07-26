@@ -24,7 +24,7 @@ const Calculator = () => {
     return <>
         <div className='main-div max-lg:mt-16'>
             <div className='history-div'>
-                <h1 className='text-4xl font-semibold'>Recent Calculations</h1>
+                <h1 className='text-4xl font-semibold text-white'>Recent Calculations</h1>
                 <div className='history'>
                     <ul>
                         {selector.map((elements, index) => {
